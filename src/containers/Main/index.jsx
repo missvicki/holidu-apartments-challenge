@@ -3,20 +3,25 @@ import {Container} from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 import AvailableApartments from '../../components/AvailableApartments';
+import ApartmentList from '../../components/ApartmentList'
 import {
-    getApartmentsRequest
+    getApartmentsRequest, getApartments
   } from './state/actions/apartments';
 import { bindActionCreators } from 'redux';
 
 export class Main extends Component {
-    componentWillMount(){
+    componentDidMount(){
         this.props.getApartmentsRequest();
     }
     render(){
-        const {totalApartments} = this.props;
+        const {totalApartments, apartments} = this.props;
+        const x = this.props.apartments[0]
+        console.log("___props_____", x.id)
+
         return (
             <Container>
                 <AvailableApartments totalResults={totalApartments}/>
+                <ApartmentList apartments={apartments} />
             </Container>
         )
     }
@@ -24,6 +29,7 @@ export class Main extends Component {
 
 const mapStateToProps = (state) => ({
     totalApartments: state.apartments.totalApartments,
+    apartments: state.apartments.apartments,
     loading: state.loading,
 });
 
