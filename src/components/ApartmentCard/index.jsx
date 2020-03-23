@@ -1,27 +1,45 @@
 import React from 'react';
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Rating, Image } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import './card.css'
 
-function ApartmentCard(){
-    return (
-        <Card>
-            <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
-            <Card.Content>
-            <Card.Header>JJSJSJ</Card.Header>
-            <Card.Meta>
-                <span className='date'>Joined in 2015</span>
-            </Card.Meta>
-            <Card.Description>
-                Matthew is a musician living in Nashville.
-            </Card.Description>
-            </Card.Content>
-            <Card.Content extra>
-            <a>
-                <Icon name='user' />
-                22 Friends
-            </a>
-            </Card.Content>
-        </Card>
-    );
+function ApartmentCard({   
+        name, 
+        location, 
+        price, 
+        currency,
+        image,
+        rating,
+        bedrooms,
+        guests,
+        title
+    }){
+        return (
+            <Card>
+                <Image src={image} wrapped ui={false} />
+                <Card.Content>
+                    <Card.Header className="cardHeader">{name}</Card.Header>
+
+                    <Card.Description>
+                        <h5 className='location'>
+                            {location}
+                            <br/>
+                            {currency} {price}
+                            <br/> <br/>
+                            {title} | No. of Bedrooms: {bedrooms} | No. of Guests: {guests}
+                            <br /><br/>
+                            <Rating defaultRating={rating} maxRating={5} disabled />
+                        </h5>
+                        
+                    </Card.Description>
+                </Card.Content>
+                <Card.Content extra >
+                    <Link href="/apartment" className="view">
+                        View Details
+                    </Link>
+                </Card.Content>
+            </Card>
+        );
 }
 
 export default ApartmentCard;

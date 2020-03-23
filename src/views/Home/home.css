@@ -4,5 +4,6 @@
 }
   
 #content {
-    padding-bottom: 2.5rem;    /* Footer height */
+    padding-bottom: 2.5rem;    
+    margin-bottom: 3rem;
 }
