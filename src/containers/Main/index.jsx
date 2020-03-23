@@ -1,31 +1,37 @@
 import React, {Component} from 'react';
-import {Container} from 'semantic-ui-react';
+import {Grid, Container} from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 import AvailableApartments from '../../components/AvailableApartments';
+import ApartmentList from '../../components/ApartmentList';
+import './main.css';
 import {
     getApartmentsRequest
   } from './state/actions/apartments';
 import { bindActionCreators } from 'redux';
 
 export class Main extends Component {
-    componentWillMount(){
+    componentDidMount(){
         this.props.getApartmentsRequest();
     }
     render(){
-        const {totalApartments} = this.props;
+        const {totalApartments, apartments} = this.props;
         return (
             <Container>
                 <AvailableApartments totalResults={totalApartments}/>
+                <Grid columns={4} className="gridList">
+                    <ApartmentList apartments={apartments} className="cardItem"/>
+                </Grid>
             </Container>
         )
     }
 }
 
 const mapStateToProps = (state) => ({
-    totalApartments: state.apartments.totalApartments,
-    loading: state.loading,
-});
+    totalApartments: state.apartmentsReducer.totalApartments,
+    apartments: state.apartmentsReducer.apartments,
+    loading: state.apartmentsReducer.loading
+})
 
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({

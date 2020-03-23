@@ -6,7 +6,7 @@ import {
   
   export const getApartments = (data) => ({
     type: GET_APARTMENTS_SUCCESS,
-    payload: data,
+    payload: data.offers,
     totalApartments: data.offers.length
   });
   export const getApartmentsFailure = (data) => ({

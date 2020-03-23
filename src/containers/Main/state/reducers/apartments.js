@@ -6,23 +6,23 @@ import {
   
 const intialState = {
     loading: false,
-    apartments: {},
+    apartments: [],
     totalApartments: 0,
-    error: {},
+    error: null,
 };
   
-  const apartments = (state = intialState, action) => {
-    switch (action.type) {
-      case GET_APARTMENTS_REQUEST:
-        return { ...state, loading: true };
-      case GET_APARTMENTS_FAILURE:
-        return { ...state, loading: false, error: action.payload };
-      case GET_APARTMENTS_SUCCESS:
-        return { ...state, loading: false, apartments: action.payload, totalApartments: action.totalApartments};
-      default:
-        return { ...state };
-    }
-  };
-  
-  export default apartments;
+const apartmentsReducer = (state = intialState, action) => {
+  switch (action.type) {
+    case GET_APARTMENTS_REQUEST:
+      return { ...state, loading: true };
+    case GET_APARTMENTS_FAILURE:
+      return { ...state, loading: false, error: action.payload };
+    case GET_APARTMENTS_SUCCESS:
+      return { ...state, loading: false, apartments: action.payload, totalApartments: action.totalApartments};
+    default:
+      return { ...state };
+  }
+};
+
+export default apartmentsReducer;
   

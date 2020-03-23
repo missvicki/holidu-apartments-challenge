@@ -1,0 +1,13 @@
+.cardHeader{
+    text-align: left !important;
+}
+.location{
+    padding-left: 25px;
+}
+.view{
+    color: teal !important;
+    padding-left: 25px;
+}
+.view:hover{
+    color: #5361e4 !important;
+}
