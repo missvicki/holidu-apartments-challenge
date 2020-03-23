@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import testReducer from "../containers/App/state/reducers";
+import apartments from "../containers/Main/state/reducers/apartments";
 
 export default combineReducers({
-  testReducer
+  apartments
 });
