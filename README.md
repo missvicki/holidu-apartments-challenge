@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/missvicki/holidu-apartments-challenge.svg?branch=develop)](https://travis-ci.org/missvicki/holidu-apartments-challenge) [![Test Coverage](https://api.codeclimate.com/v1/badges/6e0e773ecc457fe53e66/test_coverage)](https://codeclimate.com/github/missvicki/holidu-apartments-challenge/test_coverage)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

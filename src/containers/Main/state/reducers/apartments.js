@@ -7,7 +7,7 @@ import {
 const intialState = {
     loading: false,
     apartments: {},
-    totalApartments: {},
+    totalApartments: 0,
     error: {},
 };
   
