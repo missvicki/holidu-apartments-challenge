@@ -3,7 +3,7 @@ import {
     GET_APARTMENTS_FAILURE,
     GET_APARTMENTS_REQUEST
   } from '../types';
-  
+
   export const getApartments = (data) => ({
     type: GET_APARTMENTS_SUCCESS,
     payload: data,
@@ -15,5 +15,4 @@ import {
   });
   export const getApartmentsRequest = () => ({
       type: GET_APARTMENTS_REQUEST
-  })
-  
+  });

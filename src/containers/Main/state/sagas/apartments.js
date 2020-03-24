@@ -2,7 +2,7 @@ import { put, call, takeLatest } from 'redux-saga/effects';
 import axios from 'axios';
 
 import {
-  GET_APARTMENTS_REQUEST, 
+  GET_APARTMENTS_REQUEST,
 } from '../types';
 import {getApartments, getApartmentsFailure} from '../actions/apartments';
 
@@ -10,8 +10,7 @@ export async function fetchApartments (){
     const response = await axios.get(
         'https://api.holidu.com/rest/v6/search/offers?searchTerm=Mallorca,%20Spanien'
     );
-    const data = response.data;
-    return data;
+    return response.data;
 }
 
 export function* receivesApartments(action) {

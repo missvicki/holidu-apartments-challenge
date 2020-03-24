@@ -3,15 +3,15 @@ import {
     GET_APARTMENTS_SUCCESS,
     GET_APARTMENTS_REQUEST
 } from '../types';
-  
-const intialState = {
+
+const initialState = {
     loading: false,
-    apartments: {},
+    apartments: [],
     totalApartments: 0,
     error: {},
 };
-  
-  const apartments = (state = intialState, action) => {
+
+  const apartments = (state = initialState, action) => {
     switch (action.type) {
       case GET_APARTMENTS_REQUEST:
         return { ...state, loading: true };
@@ -23,6 +23,5 @@ const intialState = {
         return { ...state };
     }
   };
-  
+
   export default apartments;
-  

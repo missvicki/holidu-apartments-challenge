@@ -30,9 +30,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({
     getApartmentsRequest
-    // add other watcher sagas to this object to map them to props
     }, dispatch);
-}
+};
 
 export default connect(
     mapStateToProps,

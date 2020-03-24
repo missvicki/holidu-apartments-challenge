@@ -76,6 +76,6 @@ const CardExampleGroups = () => (
       </Card.Content>
     </Card>
   </Card.Group>
-)
+);
 
 export default CardExampleGroups
