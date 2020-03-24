@@ -1,3 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header should not have regressed 1`] = `""`;
+exports[`Header should not have regressed 1`] = `
+<div
+  className="header"
+>
+  <h2
+    className="title"
+  >
+    Holidu Apartments
+  </h2>
+  <div
+    className="ui secondary menu"
+  >
+    <a
+      className="active item"
+    >
+      Home
+    </a>
+    <div
+      className="right menu"
+    >
+      <div
+        className="item"
+      >
+        <div
+          className="ui icon input"
+        >
+          <i
+            aria-hidden="true"
+            className="search icon"
+          />
+          <input
+            placeholder="Apartments, Location"
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

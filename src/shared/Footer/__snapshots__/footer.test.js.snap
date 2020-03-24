@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer should not have regressed 1`] = `""`;
+exports[`Footer should not have regressed 1`] = `
+<div
+  className="footer"
+>
+  <h2
+    className="foot"
+  >
+    Copyright © 2020
+  </h2>
+</div>
+`;

@@ -1,3 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home should not have regressed 1`] = `""`;
+exports[`Home should not have regressed 1`] = `
+<div
+  className="page-container"
+>
+  <div
+    id="content"
+  >
+    <Header />
+    <Connect(Main) />
+  </div>
+  <Footer />
+</div>
+`;
